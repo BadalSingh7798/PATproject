@@ -73,21 +73,10 @@ public class PATclass {
 					    .ignoring(ElementClickInterceptedException.class);
 
 					wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='margin-right']"))).click();
-				//System.out.println("*inside if*1*");
-				//Thread.sleep(3000);
-			
 				
-				 
-				//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//button[@class='margin-right']")));
-				//wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//div[@style='display: none;'])[1]")));
-			//driver.findElement(By.xpath("//button[@class='margin-right']")).click();
-			//System.out.println("inside if *2*");
-					
-            //Actions action=new Actions(driver);
-			//action.moveToElement(Button).build().perform();
 			
 			}}else {
-				System.out.println("inside else*2*");
+				
 				driver.findElement(By.xpath("//input[contains(@class,'searchField')]")).sendKeys(prop.getProperty("input"));
 				driver.findElement(By.xpath("//button[@class='margin-right']")).click();
 			
@@ -167,7 +156,7 @@ public class PATclass {
 	    	    System.out.println("Publication Date: " + publicationDate);
 	    	} else 
 	    	{
-	    		System.out.println("Publication date iss missing – fetch from another table.");
+	    		System.out.println("Publication date is missing – fetch from another table.");
 	    		JavascriptExecutor js2 = (JavascriptExecutor) driver;
 
 	    		
@@ -206,7 +195,7 @@ public class PATclass {
 
 			     System.out.println("Difference in Days: " + daysBetween2);
 		        }catch (DateTimeParseException e) {
-		        	System.out.println("some minor xception were handled here");
+		        	System.out.println("some minor exception were handled here");
 		        }
 	
     
@@ -225,7 +214,7 @@ public class PATclass {
 	     System.out.println("Difference in Days: " + daysBetween);
 	        
 	        }catch (DateTimeParseException e) {
-	        	System.out.println("some minor eception were handled here");
+	        	System.out.println("some minor exception were handled here");
 	        }
 	        
 	       driver.quit();
